@@ -18,6 +18,7 @@ axios_1.default.get(url).then((response) => {
 //     Has a title of: ${title}
 //     Is it finished? ${completed}
 //   `);
+// Object Destructuring cleaner way to write the above function
 const logTodo = ({ id, title, completed }) => {
     console.log(`
     The Todo with ID: ${id}
