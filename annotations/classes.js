@@ -1,22 +1,23 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 class Vehicle {
-    drive() {
-        console.log("chugga chugga");
+    color;
+    constructor(color) {
+        this.color = color;
     }
     honk() {
-        console.log("beep beep");
+        console.log("beep");
     }
 }
-class Car extends Vehicle {
-    drive() {
-        console.log("vroom vroom");
-    }
-    startDrivingProcess() {
-        this.drive();
-        this.honk();
-    }
-}
-const vehicle = new Car();
-vehicle.startDrivingProcess();
+const vehicle = new Vehicle("orange");
+console.log(vehicle.color);
+// class Car extends Vehicle {
+//  private drive(): void {
+//    console.log('vroom');
+//  }
+//  startDrivingProcess(): void {
+//    this.drive();
+//    this.honk();
+//  }
+// }
 //# sourceMappingURL=classes.js.map
