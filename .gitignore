@@ -7,6 +7,11 @@ build/
 out/
 *.tsbuildinfo
 
+# Source maps generated during builds
+*.js.map
+*.d.ts.map
+*.d.ts
+
 # Environment secrets
 .env
 .env.*
