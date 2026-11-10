@@ -11,13 +11,20 @@ class Vehicle {
 }
 const vehicle = new Vehicle("orange");
 console.log(vehicle.color);
-// class Car extends Vehicle {
-//  private drive(): void {
-//    console.log('vroom');
-//  }
-//  startDrivingProcess(): void {
-//    this.drive();
-//    this.honk();
-//  }
-// }
+class Car extends Vehicle {
+    wheels;
+    constructor(wheels, color) {
+        super(color);
+        this.wheels = wheels;
+    }
+    drive() {
+        console.log("vroom");
+    }
+    startDrivingProcess() {
+        this.drive();
+        this.honk();
+    }
+}
+const car = new Car(4, "red");
+car.startDrivingProcess();
 //# sourceMappingURL=classes.js.map
