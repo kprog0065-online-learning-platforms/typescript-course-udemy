@@ -3,11 +3,23 @@ class Vehicle {
     console.log("chugga chugga");
   }
 
-  honk(): void {
+  protected honk(): void {
     console.log("beep beep");
   }
 }
 
-const vehicle = new Vehicle();
-vehicle.drive();
-vehicle.honk();
+class Car extends Vehicle {
+  drive(): void {
+    console.log("vroom vroom");
+  }
+
+  startDrivingProcess(): void {
+    this.drive();
+    this.honk();
+  }
+}
+
+
+
+const vehicle = new Car();
+vehicle.startDrivingProcess();

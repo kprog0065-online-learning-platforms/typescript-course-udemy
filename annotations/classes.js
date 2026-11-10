@@ -8,7 +8,15 @@ class Vehicle {
         console.log("beep beep");
     }
 }
-const vehicle = new Vehicle();
-vehicle.drive();
-vehicle.honk();
+class Car extends Vehicle {
+    drive() {
+        console.log("vroom vroom");
+    }
+    startDrivingProcess() {
+        this.drive();
+        this.honk();
+    }
+}
+const vehicle = new Car();
+vehicle.startDrivingProcess();
 //# sourceMappingURL=classes.js.map
