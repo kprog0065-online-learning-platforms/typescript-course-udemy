@@ -1,20 +1,15 @@
-import { User } from "./User";
-import { Company } from "./Company";
-
-declare const google: any;
+/// <reference types="@types/google.maps" />
 
 (window as any).initMap = () => {
-  const map = new google.maps.Map(
-    document.getElementById("map") as HTMLElement,
-    {
-      center: { lat: 43.6532, lng: -79.3832 },
-      zoom: 12,
-    }
-  );
+  const mapDiv = document.getElementById("map");
+
+  if (!mapDiv) {
+    console.error("Could not find the #map element.");
+    return;
+  }
+
+  new google.maps.Map(mapDiv, {
+    center: { lat: 0, lng: 0 },
+    zoom: 1,
+  });
 };
-
-const user = new User();
-console.log(user);
-
-const company = new Company();
-console.log(company);
