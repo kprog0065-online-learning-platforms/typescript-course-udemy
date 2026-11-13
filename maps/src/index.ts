@@ -1,15 +1,5 @@
-/// <reference types="@types/google.maps" />
+import { CustomMap } from './CustomMap';
 
-(window as any).initMap = () => {
-  const mapDiv = document.getElementById("map");
+new CustomMap('map');
 
-  if (!mapDiv) {
-    console.error("Could not find the #map element.");
-    return;
-  }
 
-  new google.maps.Map(mapDiv, {
-    center: { lat: 0, lng: 0 },
-    zoom: 1,
-  });
-};
