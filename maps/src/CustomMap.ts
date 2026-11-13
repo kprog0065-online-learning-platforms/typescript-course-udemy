@@ -1,4 +1,5 @@
 /// <reference types="@types/google.maps" />
+import { User } from "./User";
 
 export class CustomMap {
   private googleMap: google.maps.Map;
@@ -13,6 +14,17 @@ export class CustomMap {
     this.googleMap = new google.maps.Map(mapDiv, {
       center: { lat: 0, lng: 0 },
       zoom: 1,
+      mapId: "DEMO_MAP_ID",
+    });
+  }
+
+  addUserMarker(user: User): void {
+    new google.maps.marker.AdvancedMarkerElement({
+      map: this.googleMap,
+      position: {
+        lat: user.location.lat,
+        lng: user.location.lng,
+      },
     });
   }
 }
