@@ -4,6 +4,11 @@
       "id": 1,
       "name": "John Doey",
       "age": 36
+    },
+    {
+      "name": "new record",
+      "age": 0,
+      "id": 2
     }
   ]
 }
